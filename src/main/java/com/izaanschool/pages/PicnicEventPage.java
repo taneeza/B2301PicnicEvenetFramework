@@ -50,13 +50,11 @@ public class PicnicEventPage extends BasePageObject {
 
 	}
 
-
-
-	public String dropdownAdultSelect() {
+	public String dropdownAdultSelect(int x) {
 		//Declare the drop-down element as an instance of the Select class.
 		Select dropdownAdult = new Select(find(noOfAdultBoxLocator));
 		// choose 2
-		dropdownAdult.selectByIndex(3);
+		dropdownAdult.selectByIndex(x);
 		String noOfAdult= dropdownAdult.getFirstSelectedOption().getText();
 		log.info(noOfAdult+ " is selected");
 		return noOfAdult;
@@ -64,23 +62,17 @@ public class PicnicEventPage extends BasePageObject {
 	}
 
 
-
-
-	public String dropdownChildrenSelect() {
+		public String dropdownChildrenSelect(String y) {
 		//Declare the drop-down element as an instance of the Select class.
 		Select dropdownChildren = new Select(find(noOfChildrenBoxLocator));
 		// choose 10
-		dropdownChildren.selectByVisibleText("10");
+		dropdownChildren.selectByVisibleText(y);
 		log.info("10 is selected");
 		String noOfChildren= dropdownChildren.getFirstSelectedOption().getText();
 		log.info(noOfChildren+ " is selected");
 		return noOfChildren;
 	}
-	/*public String textNoOfChildren() {
-		String actualNumberOfChildren = dropdownChildren.getFirstSelectedOption().getText();
-		log.info(actualNumberOfChildren);
-		return actualNumberOfChildren;
-	}*/
+
 
 	public void submit(){
 		click(submitButtonLocator);

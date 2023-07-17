@@ -5,7 +5,9 @@
 	<test name="PositiveLogInTest">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.izaanschool.loginpagetest.PositiveLoginTests" />
+			<class name="com.izaanschool.picnicEventTest.FormSubmissionTest" />
+			<class name="com.izaanschool.picnicEventTest.DropdownAdultListTest" />
+
 		</classes>
 
 	</test>

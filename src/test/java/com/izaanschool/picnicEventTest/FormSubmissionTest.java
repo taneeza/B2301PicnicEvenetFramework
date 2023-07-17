@@ -15,12 +15,11 @@ public class FormSubmissionTest extends BaseTest {
         picnicEventPage.openPage();
 
         //input data
-        picnicEventPage.eventRegistration("tanija","123@gmail.com", "1234567890");
-
-        //Verify
+        picnicEventPage.eventRegistration("tanija","tanija.ferdousy@gmail.com", "1234567890");
 
         //dropdown page method to select
-       picnicEventPage.dropdownAdultSelect();
+       picnicEventPage.dropdownAdultSelect(3);
+       picnicEventPage.dropdownChildrenSelect("10");
 
        //click submit button
         picnicEventPage.submit();
